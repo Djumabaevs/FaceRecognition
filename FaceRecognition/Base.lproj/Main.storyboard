@@ -19,6 +19,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ba-uQ-PfB">
                                 <rect key="frame" x="96" y="273" width="199" height="136"/>
                                 <state key="normal" title="SignIN"/>
+                                <connections>
+                                    <action selector="signedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvW-va-er1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-gH-oUM">
                                 <rect key="frame" x="127" y="454" width="161" height="122"/>
@@ -42,10 +45,44 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xmo-gH-oUM" secondAttribute="bottom" constant="286" id="ym5-KE-BBf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="Xmo-gH-oUM" id="fV1-yS-1XA"/>
+                        <segue destination="s8o-41-B87" kind="show" identifier="toSecondVC" id="Q6l-z3-pFk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KaA-IE-tSt">
+            <objects>
+                <viewController id="s8o-41-B87" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NmF-lS-gI7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="signed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-Kv-wu7">
+                                <rect key="frame" x="132" y="334" width="151" height="124"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EqM-eY-UBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ARA-Kv-wu7" firstAttribute="centerX" secondItem="NmF-lS-gI7" secondAttribute="centerX" id="KkW-ns-v1J"/>
+                            <constraint firstItem="ARA-Kv-wu7" firstAttribute="top" secondItem="EqM-eY-UBY" secondAttribute="top" constant="290" id="b8H-TU-VZz"/>
+                            <constraint firstItem="ARA-Kv-wu7" firstAttribute="leading" secondItem="EqM-eY-UBY" secondAttribute="leading" constant="132" id="cFs-GT-q3M"/>
+                            <constraint firstItem="EqM-eY-UBY" firstAttribute="bottom" secondItem="ARA-Kv-wu7" secondAttribute="bottom" constant="404" id="ji2-Fq-fo7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0cy-4D-3Kt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBO-dL-qe2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="68"/>
         </scene>
     </scenes>
     <resources>
