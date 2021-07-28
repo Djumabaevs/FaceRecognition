@@ -24,6 +24,14 @@ class ViewController: UIViewController {
         
         if authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             
+            authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "is it you?") { (success, error) in
+                if success == true {
+                    //successful auth
+                } else {
+                    myLabel.text = "error"
+                }
+            }
+            
         }
         
     }
