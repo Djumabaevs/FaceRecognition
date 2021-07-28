@@ -27,8 +27,9 @@ class ViewController: UIViewController {
             authContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "is it you?") { (success, error) in
                 if success == true {
                     //successful auth
+                    self.performSegue(withIdentifier: "toSecondVC", sender: nil)
                 } else {
-                    myLabel.text = "error"
+                    self.myLabel.text = "error"
                 }
             }
             
