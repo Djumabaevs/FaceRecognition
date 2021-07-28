@@ -18,7 +18,13 @@ class ViewController: UIViewController {
 
     @IBAction func signedIn(_ sender: Any) {
         
+        let authContext = LAContext()
         
+        var error: NSError?
+        
+        if authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            
+        }
         
     }
     
